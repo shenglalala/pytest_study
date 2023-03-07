@@ -1,3 +1,4 @@
     test_add_project_param_demo:
-    - [{'p_name': 'yaml_demo_03', 'pu_app': 'param_pa_03', 'p_desc': 'param_pd_03'}, 'yaml_demo_03']
-    - [{'p_name': 'yaml_demo_04', 'pu_app': 'param_pa_04', 'p_desc': 'param_pd_04'}, 'yaml_demo_04']
+    - [{'p_name': 'yaml_demo_05', 'pu_app': 'param_pa_05', 'p_desc': 'param_pd_05'}, 'yaml_demo_05']
+    - [{'p_name': 'yaml_demo_06', 'pu_app': 'param_pa_06', 'p_desc': 'param_pd_06'}, 'yaml_demo_06']
+    - [{'p_name': 'yaml_demo_07', 'pu_app': 'param_pa_07', 'p_desc': 'param_pd_07'}, 'yaml_demo_07']
