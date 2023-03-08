@@ -22,18 +22,19 @@ class ElementNotFound(Exception):
 
 class Base():
     ''' 基于原生selenium的二次封装 '''
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument('--window-size=1920,1080')
-    co_driver = webdriver.Chrome('chromedriver', chrome_options=chrome_options)
-    def __init__(self, driver:co_driver, timeout=10, t=0.5):
-        # self.chrome_options = Options()
-        # self.chrome_options = webdriver.ChromeOptions()
-        # self.chrome_options.add_argument("-headless")
-        # self.driver = driver(chrome_options=self.chrome_options)
+    # chrome_options = webdriver.ChromeOptions()
+    # chrome_options.add_argument('--headless')
+    # chrome_options.add_argument('--no-sandbox')
+    # chrome_options.add_argument('--disable-gpu')
+    # chrome_options.add_argument('--disable-dev-shm-usage')
+    # # chrome_options.add_argument('--window-size=1920,1080')
+    # co_driver = webdriver.Chrome('chromedriver', options=chrome_options)
+
+    def __init__(self, driver:webdriver.Chrome, timeout=10, t=0.5):
         self.driver = driver
         self.timeout = timeout
         self.t = t
+
 
     def find(self, locator):
         ''' 定位到元素返回元素对象，没定位到timeout异常 '''
