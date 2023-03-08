@@ -20,7 +20,11 @@ trivial    # 轻微缺陷（必须项无提示，或者提示不规范）
 #                    'param_demo_05'),
 #                   ({'p_name': 'param_demo_06', 'pu_app': 'param_pa_06', 'p_desc': 'param_pd_06'},
 #                    'param_demo_06')]
-data_file = '/Users/chengyaoquan/workspace/pytest_web_yoyo/case/test_data.yml'
+
+# os.path.realpath(__file__)  获取当前文件绝对路径，包括当前文件
+# os.path.dirname(__file__)  获取当前文件的上一层绝对路径，不包括当前文件
+curpath = os.path.dirname(os.path.realpath(__file__))
+data_file = curpath + '/test_data.yml'    # 拼接
 test_demo_data = readyml(data_file)['test_add_project_param_demo']
 
 @allure.feature('添加项目测试用例')
