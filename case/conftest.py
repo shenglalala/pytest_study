@@ -2,7 +2,7 @@ import time
 import pytest
 from selenium import webdriver
 from pages.login_page import LoginPage
-from common.driver_handless import d_hless
+from common.driver_headless import d_hless
 
 # 全局fixture
 @pytest.fixture(scope='session')
@@ -13,7 +13,7 @@ def driver(request):
 
     # 无头模式
     d_h = d_hless()
-    _driver = d_h.handless_driver()
+    _driver = d_h.headless_driver()
 
     def end():
         ''' 测试用例完成后，执行终结函数 '''
